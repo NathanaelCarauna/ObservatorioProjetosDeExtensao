@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import application.model.Usuario;
 import application.service.UsuarioService;
+import javassist.NotFoundException;
 
 @Controller
 @RequestMapping("/api/usuario")
@@ -30,8 +31,14 @@ public class UsuarioController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Usuario> getById(@PathVariable long id){
-		var usuario = service.getById(id);
-		return ResponseEntity.ok(usuario);
+		Usuario usuario;
+		try {
+			usuario = service.getById(id);
+			return ResponseEntity.ok(usuario);
+		} catch (NotFoundException e) {
+			e.printStackTrace();
+			return ResponseEntity.notFound().build();
+		}
 	}
 	
 	@PostMapping()
@@ -41,15 +48,27 @@ public class UsuarioController {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Usuario> updateUsuario(@PathVariable long id, @RequestBody Usuario usuario){
-		var usuario = service.updateUsuario(id, usuario);
-		return ResponseEntity.ok(usuario);
+	public ResponseEntity<Usuario> updateUsuario(@PathVariable long id, @RequestBody Usuario usuarioP){
+		Usuario usuario;
+		try {
+			usuario = service.updateUsuario(id, usuarioP);
+			return ResponseEntity.ok(usuario);
+		} catch (NotFoundException e) {
+			e.printStackTrace();
+			return ResponseEntity.notFound().build();
+		}
 	}
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Usuario> deleteUsuario(@PathVariable long id){
-		var usuario = service.deleteUsuario(id);
-		return ResponseEntity.ok(usuario);
+		Usuario usuario;
+		try {
+			usuario = service.deleteUsuario(id);
+			return ResponseEntity.ok(usuario);
+		} catch (NotFoundException e) {
+			e.printStackTrace();
+			return ResponseEntity.notFound().build();
+		}
 	}
 	
 }
