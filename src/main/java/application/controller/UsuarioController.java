@@ -43,7 +43,7 @@ public class UsuarioController {
 	
 	@PostMapping()
 	public ResponseEntity<Usuario> createUsuario(@RequestBody Usuario usuarioParam){
-		var usuario = service.createUsuario(usuarioParam);
+		Usuario usuario = service.createUsuario(usuarioParam);
 		return ResponseEntity.ok(usuario);
 	}
 	
