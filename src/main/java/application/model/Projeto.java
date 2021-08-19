@@ -18,12 +18,12 @@ import lombok.Data;
 @Entity
 @Data
 public class Projeto {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "projeto")	
+	private String titulo;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "projeto")
 	private List<Participacao> participantes;
 	private ProjetoCategoria categoria;
 	private Date dataDeInicio;

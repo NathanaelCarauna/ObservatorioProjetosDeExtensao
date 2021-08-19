@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import application.model.Usuario;
-import application.repository.UsuarioDAO;
+import application.repository.IUsuarioDAO;
 import javassist.NotFoundException;
 
 @Service
 public class UsuarioService {
 
 	@Autowired
-	private UsuarioDAO dao;
+	private IUsuarioDAO dao;
 	
 	public List<Usuario> getAll() {
 		return dao.findAll();

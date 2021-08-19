@@ -22,21 +22,13 @@ public class Participacao {
 	private long id;
 
 	@ManyToOne
-	@JoinColumn(name = "id_usuario")
-	@JsonIgnore
+	@JoinColumn(name = "id_usuario")	
 	private Usuario usuario;
 	
 	private TipoUsuario tipo;
 
 	@ManyToOne
-	@JoinColumn(name = "id_projeto")
-	@JsonIgnore
-	private Projeto projeto;
-
-	public Participacao(Usuario usuario, TipoUsuario tipo) {
-		super();
-		this.usuario = usuario;
-		this.tipo = tipo;
-	}
+	@JoinColumn(name = "id_projeto")	
+	private Projeto projeto;	
 
 }
