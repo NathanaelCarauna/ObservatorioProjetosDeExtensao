@@ -1,24 +1,30 @@
-import { useState, useEffect } from "react";
 import './App.css';
-import JsonData from "./data/data.json";
-import { Navigation } from './Components/navigation';
+import {Navigation} from './Components/navigation'
 import { Header } from './Components/header';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { About } from './Components/about';
-import { Noticias } from "./Components/Noticias";
+import Projetos from './Components/projetos';
+import Estatistica from './Components/estatistica';
+import Cadastro from './Components/cadastro';
+import Perfil from './Components/perfil';
+
 
 const App = () => {
-  const [landingPageData, setLandingPageData] = useState({});
-  useEffect(() => {
-    setLandingPageData(JsonData);
-  }, []);
-
   return (
+    <Router>
     <div>
       <Navigation />
-      <Header data={landingPageData.Header} />
-      <Noticias data={landingPageData.Gallery}/>
-
+      <Switch>
+        <Route path='/' exact component={Header} ></Route>
+        <Route path='/sobre' component={About}></Route>
+        <Route path='/projetos' component={Projetos}></Route>
+        <Route path='/estatisticas' component={Estatistica}></Route>
+        <Route path='/cadastro' component={Cadastro}></Route>
+        <Route path='/perfil' component={Perfil}></Route>
+      </Switch>
     </div>
+    </Router>
+    
   );
 };
 

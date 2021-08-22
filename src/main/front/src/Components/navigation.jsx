@@ -2,6 +2,7 @@ export const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container'>
+        <img src="img/assets/Logo-upe-site.png" className="logoUPE" alt="" />{" "}
         <div className='navbar-header'>
           <button
             type='button'
@@ -26,32 +27,32 @@ export const Navigation = (props) => {
         >
           <ul className='nav navbar-nav navbar-right'>
             <li>
-              <a href='#inicio' className='page-scroll'>
+              <a href='/' className='page-scroll'>
                 Inicio
               </a>
             </li>
             <li>
-              <a href='#projetos' className='page-scroll'>
+              <a href='/projetos' className='page-scroll'>
                 Projetos
               </a>
             </li>
             <li>
-              <a href='#estatiticas' className='page-scroll'>
+              <a href='/estatiticas' className='page-scroll'>
                 Estatisticas
               </a>
             </li>
             <li>
-              <a href='#sobre' className='page-scroll'>
+              <a href='/sobre' className='page-scroll'>         
                 Sobre
               </a>
             </li>
             <li>
-              <a href='#cadastro' className='page-scroll'>
+              <a href='/cadastro' className='page-scroll'>
                 Cadastro
               </a>
             </li>
             <li>
-              <a href='#perfil' className='page-scroll'>
+              <a href='/perfil' className='page-scroll'>
                 Perfil
               </a>
             </li>
