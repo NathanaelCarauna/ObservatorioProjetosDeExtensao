@@ -1,5 +1,6 @@
 package application.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -7,34 +8,40 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+import javax.persistence.ManyToMany;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
 
 @Entity
 @Data
-public class Usuario {	
-	
+public class Usuario {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	@NotBlank(message = "O campo nome é necessário")
+//	@NotBlank(message = "O campo nome é necessário")
 	private String nome;
-	@NotBlank(message = "O campo sobre nome é necessário")
+//	@NotBlank(message = "O campo sobre nome é necessário")
 	private String sobrenome;
-	
-	@Email(message = "O email deve ser um email válido")
-	@NotBlank(message = "É necessário um email")
+
+//	@Email(message = "O email deve ser um email válido")
+//	@NotBlank(message = "É necessário um email")
 	private String email;
-	
-	@NotBlank(message = "O campo senha é necessário")
+
+//	@NotBlank(message = "O campo senha é necessário")
 	private String password;
-	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")	
-	private List<Participacao> participacao;
-	
+
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })	
+	@JsonIgnore
+	private List<Projeto> projetos = new ArrayList<Projeto>();
+
+	public void addProject(Projeto projeto) {
+		projetos.add(projeto);
+	}
+
+	public void removeProject(Projeto projeto) {
+		projetos.remove(projeto);
+	}
 }

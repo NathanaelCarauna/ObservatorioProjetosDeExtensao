@@ -6,12 +6,18 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import application.model.enums.EditalEnum;
@@ -71,7 +77,16 @@ public class Projeto {
 	@Lob
 	@Column
 	private String referencias;
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "projeto")
-	private List<Participacao> participantes;
+		
+	@Fetch(value = FetchMode.SELECT)
+    @ManyToMany(cascade = CascadeType.ALL,fetch=FetchType.EAGER, mappedBy = "projetos")
+	private List<Usuario> usuarios;
 	private SituacaoEnum situacao;
+	
+	public void addUser(Usuario user) {
+		usuarios.add(user);
+	}
+	public void removeUser(Usuario user) {
+		usuarios.remove(user);
+	}
 }
