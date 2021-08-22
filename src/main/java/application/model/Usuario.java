@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,7 +34,7 @@ public class Usuario {
 //	@NotBlank(message = "O campo senha é necessário")
 	private String password;
 
-	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })	
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.EAGER)	
 	@JsonIgnore
 	private List<Projeto> projetos = new ArrayList<Projeto>();
 

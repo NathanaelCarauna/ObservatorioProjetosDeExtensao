@@ -1,5 +1,7 @@
 package application.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,13 +24,14 @@ public class ParticipacaoService {
 	@Autowired
 	private UsuarioService usuarioService;
 
-//	public List<Projeto> getProjetosByUsuarioId(long id) throws NotFoundException{
-//		Optional<List<Projeto>> byUsuarios = projetoDao.getByUsuarioID(id);
-//		if(!byUsuarios.isPresent()) {
-//			throw new NotFoundException("Projetos não encontrados");
-//		}
-//		return  byUsuarios.get();
-//	}
+	public List<Projeto> getProjetosByUsuarioId(long id) throws NotFoundException{
+		Usuario user = usuarioService.getById(id);
+		if(user == null) {
+			throw new NotFoundException("Usuario não encontrado");
+		}
+		List<Projeto> projetos = user.getProjetos();
+		return  projetos;
+	}
 	
 	public Projeto addParticipante(Participacao participacao) throws NotFoundException {
 		Projeto projeto = projetoService.getById(participacao.getProjeto_id());

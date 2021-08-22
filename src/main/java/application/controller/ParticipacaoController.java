@@ -1,7 +1,11 @@
 package application.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,18 +23,18 @@ public class ParticipacaoController {
 	@Autowired
 	private ParticipacaoService participacaoService;
 	
-//	@GetMapping("/{id}")	
-//	public ResponseEntity<List<Projeto>> GetProjetosById(@PathVariable long id){
-//		List<Projeto> projetos;
-//		try {
-//			projetos = participacaoService.getProjetosByUsuarioId(id);
-//			return ResponseEntity.ok(projetos); 		
-//		} catch (NotFoundException e) {
-//			
-//			e.printStackTrace();
-//			return ResponseEntity.notFound().build();
-//		}
-//	}
+	@GetMapping("/{id}")	
+	public ResponseEntity<List<Projeto>> GetProjetosById(@PathVariable long id){
+		List<Projeto> projetos;
+		try {
+			projetos = participacaoService.getProjetosByUsuarioId(id);
+			return ResponseEntity.ok(projetos); 		
+		} catch (NotFoundException e) {
+			
+			e.printStackTrace();
+			return ResponseEntity.notFound().build();
+		}
+	}
 	
 	@PostMapping
 	public ResponseEntity<Projeto> addParticipante(@RequestBody Participacao participacao){
