@@ -1,5 +1,5 @@
 package application.model.enums;
 
-public enum ProjetoCategoria {	
+public enum ModalidadeEnum {	
 	EVENTO, PROGRAMA, PROJETO, CURSO
 }
