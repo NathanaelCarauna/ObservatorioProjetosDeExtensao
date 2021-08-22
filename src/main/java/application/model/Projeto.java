@@ -12,7 +12,9 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import application.model.enums.EditalEnum;
 import application.model.enums.ProjetoCategoria;
+import application.model.enums.SituacaoEnum;
 import lombok.Data;
 
 @Entity
@@ -23,9 +25,11 @@ public class Projeto {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String titulo;
+	private EditalEnum edital;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "projeto")
 	private List<Participacao> participantes;
 	private ProjetoCategoria categoria;
+	private SituacaoEnum situacao;
 	private Date dataDeInicio;
 	private Date dataDeConclusao;
 }
