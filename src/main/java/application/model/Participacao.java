@@ -22,13 +22,13 @@ public class Participacao {
 	private long id;
 
 	@ManyToOne
-	@JoinColumn(name = "id_usuario")	
+	@JoinColumn(name = "usuario_id")	
 	private Usuario usuario;
 	
 	private TipoUsuario tipo;
 
 	@ManyToOne
-	@JoinColumn(name = "id_projeto")	
+	@JoinColumn(name = "projeto_id")	
 	private Projeto projeto;	
 
 }
