@@ -27,7 +27,8 @@ public class Usuario {
 	@NotBlank(message = "O campo sobre nome é necessário")
 	private String sobrenome;
 	
-	@Email(message = "É necessário um email válido")
+	@Email(message = "O email deve ser um email válido")
+	@NotBlank(message = "É necessário um email")
 	private String email;
 	
 	@NotBlank(message = "O campo senha é necessário")
