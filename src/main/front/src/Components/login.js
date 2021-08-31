@@ -1,25 +1,20 @@
-import React from "react";
-import ReactDOM from 'react-dom';
+export const Login = (props) => {
+    return (
+        <div id='about'>
+            <div className="container" id='formulario'>
+                <div className="conteudo">
+                    <form className="formulario">
+                        <label className="texto">Login</label>
+                        <label id='legenda' for="email">Email</label>
+                        <input type="email" name="email" id="Email" placeholder="escreva seu email" />
+                        <label id='legenda' for="password">Senha</label>
+                        <input type="password" name="password" id="Password" placeholder="escreva sua senha" />
 
-class Cadastro extends React.Component {
-    render() {
-        return (
-            <div className="container_login">
-                <form className="formulario">
-                    <FormGroup >
-                        <legend className="titulo">login</legend>
-                        <label className="label" for="email">Email</label>
-                        <Input type="email" name="email" id="Email" placeholder="escreva seu email"/>
-                    </FormGroup>
-                    <FormGroup >
-                        <label className="label" for="password">Senha</label>
-                        <Input type="password" name="password" id="Password" placeholder="escreva sua senha"/>
-                    </FormGroup>
-                </form>
-                <Button className="botao" size="lg" > Login </Button>{' '}
-            </div>           
-        );
-    };
+                    </form>
+                    <button className="botao" > Login </button>{' '}
+                </div>
+            </div>
+
+        </div>
+    );
 };
-
-export default Cadastro;
