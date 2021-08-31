@@ -7,6 +7,7 @@ import Projetos from './Components/projetos';
 import Estatistica from './Components/estatistica';
 import Perfil from './Components/perfil';
 import { Cadastro } from './Components/cadastro.jsx';
+import { Login } from './Components/login.jsx';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/projetos' component={Projetos}></Route>
         <Route path='/estatisticas' component={Estatistica}></Route>
         <Route path='/cadastro' component={Cadastro}></Route>
+        <Route path='/login' component={Login}></Route>
         <Route path='/perfil' component={Perfil}></Route>
       </Switch>
     </div>

@@ -9,9 +9,9 @@ export const Cadastro = (props) => {
                         <input type="email" name="email" id="Email" placeholder="escreva seu email" />
                         <label id='legenda' for="password">Senha</label>
                         <input type="password" name="password" id="Password" placeholder="escreva sua senha" />
-
                     </form>
                     <button className="botao" > Cadastrar </button>{' '}
+                <a href='/login' className="botao" id='login'  > Login </a>{' '}
                 </div>
             </div>
 

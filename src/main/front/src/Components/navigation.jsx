@@ -16,7 +16,7 @@ export const Navigation = (props) => {
             <span className='icon-bar'></span>{' '}
             <span className='icon-bar'></span>{' '}
           </button>
-          <a className='navbar-brand page-scroll' href='#page-top'>
+          <a className='navbar-brand page-scroll' href='/'>
             Observatorio de Projetos
           </a>{' '}
         </div>
@@ -26,11 +26,6 @@ export const Navigation = (props) => {
           id='bs-example-navbar-collapse-1'
         >
           <ul className='nav navbar-nav navbar-right'>
-            <li>
-              <a href='/' className='page-scroll'>
-                Inicio
-              </a>
-            </li>
             <li>
               <a href='/projetos' className='page-scroll'>
                 Projetos
