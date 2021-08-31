@@ -1,5 +1,5 @@
 package application.model.enums;
 
 public enum TipoUsuario {
-	ORIENTADOR, PROPONENTE, VOLUNTARIO, BOLSISTA
+	PROPONENTE, COLABORADOR, EXTENSIONISTA, TECNICO, EGRESSO
 }
