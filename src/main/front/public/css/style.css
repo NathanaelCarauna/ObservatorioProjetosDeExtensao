@@ -360,3 +360,51 @@ header .intro-text {
 .hover-bg:hover .hover-text {
   opacity: 1;
 }
+
+/* cadastro */
+.conteudo{
+  margin-top: 15px;
+  padding: 50px;
+  height: 400px;
+  background: rgb(45, 33, 99);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formulario{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+input{
+  border: none;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+#formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#legenda{
+  font-size: medium;
+  align-self: flex-start;
+  
+}
+
+.texto{
+  font-size: 50px;
+}
+
+.botao{
+  margin-top: 20px;
+  border-radius: 12px;
+  border: none;
+  padding: 10px;
+  background-color: #ee0034;
+}
