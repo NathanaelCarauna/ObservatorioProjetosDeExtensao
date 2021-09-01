@@ -27,7 +27,7 @@ export default ({match}) => {
         <div id="projetos">
             <h1>{projeto.titulo}</h1>
             <div name="campus">
-                <h3> Campus</h3>
+                <h3>Campus</h3>
                 <p>{projeto.campus}</p>
             </div>
             <div name="cargaHorariaTotal">
