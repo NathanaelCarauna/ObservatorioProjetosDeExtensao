@@ -46,14 +46,14 @@ export const CadastrarProjeto = (props) => {
                         <label id='legenda' for="qtdBeneficiados">Quantidade de beneficiados</label>
                         <input type="text" id="qtdBeneficiados" name="qtdBeneficiados" placeholder="Quantidade de beneficiados" />
                         <label id='legenda' for="relacaoAtividadePesquisa">Relacão da atividade com a pesquisa</label>
-                        <input type="text" id="relacaoAtividadePesquisa" name="relacaoAtividadePesquisa" 
-                        placeholder="Relacão da atividade com a pesquisa" />
+                        <input type="text" id="relacaoAtividadePesquisa" name="relacaoAtividadePesquisa"
+                            placeholder="Relacão da atividade com a pesquisa" />
                         <label id='legenda' for="avaliacaoPeloPublico">Forma de avalição pelo público</label>
-                        <input type="text" id="avaliacaoPeloPublico" name="avaliacaoPeloPublico" 
-                        placeholder="Forma de avalição pelo público" />
+                        <input type="text" id="avaliacaoPeloPublico" name="avaliacaoPeloPublico"
+                            placeholder="Forma de avalição pelo público" />
                         <label id='legenda' for="produtoFinal">Produto final</label>
-                        <input type="text" id="produtoFinal" name="produtoFinal" 
-                        placeholder="Qual será o produto final" />
+                        <input type="text" id="produtoFinal" name="produtoFinal"
+                            placeholder="Qual será o produto final" />
                         <label id='legenda' for="orcamento">Orçamento</label>
                         <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento do projeto" />
                         <label id='legenda' for="referencias">Referências bibliográficas</label>
