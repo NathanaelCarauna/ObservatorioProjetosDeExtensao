@@ -24,8 +24,8 @@ export default ({match}) => {
     }
 
     return (
-        <div id="projetos">
-            <h1>{projeto.titulo}</h1>
+        <div id="about">
+            ? <h1>{projeto.titulo}</h1>
             <div name="campus">
                 <h3> Campus</h3>
                 <p>{projeto.campus}</p>

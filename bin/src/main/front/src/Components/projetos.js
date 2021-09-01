@@ -28,29 +28,15 @@ function Projetos(){
     }
 
     return (
-        <div id="projetos">
-            <div className="cabecalho">
-                <h1>Projetos</h1>
-                <div id='selecaoCampus'>
-                    <input list='Campus' />
-                    <datalist id='Campus'>
-                        <option value='Garanhuns'/>
-                        <option value='ArcoVerde'/>
-                    </datalist>
-                </div>
-            </div>
-            <ul>
-                {projetos.map(projeto => (   
-                    <li id='projeto' key={projeto.id}>
-                        <Link to={`/projetos/${projeto.id}` }>
-                            <div >
-                                <h3>{projeto.titulo}</h3>
-                            </div>
-                        </Link>
-                    </li>             
-                ))}
-            </ul>
-            
+        <div id="about">
+            <h1>Projetos</h1>
+            {projetos.map(projeto => (                
+                <Link to={`/projetos/${projeto.id}`}>
+                    <div key={projeto.id}>
+                        <h3>{projeto.titulo}</h3>
+                    </div>
+                </Link>
+            ))}
         </div>
     )
 }
