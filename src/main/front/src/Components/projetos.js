@@ -41,7 +41,7 @@ function Projetos(){
             </div>
             <ul>
                 {projetos.map(projeto => (   
-                    <li id='projeto' key={projeto.id}>
+                    <li id='projeto' className="projeto" key={projeto.id}>
                         <Link to={`/projetos/${projeto.id}` }>
                             <div >
                                 <h3>{projeto.titulo}</h3>

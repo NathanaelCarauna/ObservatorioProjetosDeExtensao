@@ -124,7 +124,10 @@ export default ({match}) => {
             </div>
             <div name="usuarios">
                 <h3>Usuários</h3>
-                <p>{projeto.usuarios}</p>
+                {console.log(projeto.usuarios)}
+                {/* {projeto.usuarios.map(usuario => {
+                    <p key={usuario.id}>{usuario.nome}</p>
+                })} */}
             </div>
             <div name="situacao">
                 <h3>Situação</h3>
