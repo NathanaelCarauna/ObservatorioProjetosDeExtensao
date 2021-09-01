@@ -24,13 +24,8 @@ export default ({match}) => {
     }
 
     return (
-<<<<<<< HEAD
         <div id="projetos">
             <h1>{projeto.titulo}</h1>
-=======
-        <div id="about">
-            Titulo Projeto <h1>{projeto.titulo}</h1>
->>>>>>> 7affb4517265a1fbfee00a01e11f153eacd81e98
             <div name="campus">
                 <h3> Campus</h3>
                 <p>{projeto.campus}</p>
