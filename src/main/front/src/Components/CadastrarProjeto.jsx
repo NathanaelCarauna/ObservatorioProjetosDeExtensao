@@ -1,6 +1,6 @@
 export const CadastrarProjeto = (props) => {
     return (
-        <div id='about'>
+        <div id='descricao'>
             <div className="container" id='formulario'>
                 <div className="conteudoCadastro">
                     <form className="formulario">
@@ -8,7 +8,7 @@ export const CadastrarProjeto = (props) => {
                         <label id='legenda' for="projectname">Título</label>
                         <input type="text" name="projectname" id="novoProjeto" placeholder="Título do projeto" />
                         <label id='legenda' for="campus">Instituição/Campus</label>
-                        <input type="text" name="campus" id="campus" placeholder="A qual campus o projeto pertence" />
+                        <input  type="text" name="campus" id="campus" placeholder="A qual campus o projeto pertence" />
                         <label id='legenda' for="cargaHoraria">Carga horária</label>
                         <input type="number" id="cargaHoraria" name="cargaHoraria" placeholder="Carga horária total do projeto" />
                         <label id='legenda' for="dataInicio">Data de início</label>
@@ -18,46 +18,46 @@ export const CadastrarProjeto = (props) => {
                         <label id='legenda' for="diasSemana">Dias da semana</label>
                         <input type="text" id="diasSemana" name="diasSemana" placeholder="Dias de atividade" />
                         <label id='legenda' for="publicoAlvo">Public alvo</label>
-                        <input type="text" id="publicoAlvo" name="publicoAlvo" placeholder="Publico alvo" />
+                        <input className='medio'type="text" id="publicoAlvo" name="publicoAlvo" placeholder="Publico alvo" />
                         <label id='legenda' for="parcerias">Parcerias</label>
-                        <input type="text" id="parcerias" name="parcerias" placeholder="Parcerias" />
+                        <input className='medio' type="text" id="parcerias" name="parcerias" placeholder="Parcerias" />
                         <label id='legenda' for="linhaDeExtensao">Linha de Extensão</label>
-                        <input type="text" id="linhaDeExtensao" name="linhaDeExtensao" placeholder="Linha de extensão" />
-                        <label id='legenda' for="areaTematica">Area temática</label>
-                        <input type="text" id="areaTematica" name="areaTematica" placeholder="Area temática" />
+                        <input className='medio' type="text" id="linhaDeExtensao" name="linhaDeExtensao" placeholder="Linha de extensão" />
+                        <label  id='legenda' for="areaTematica">Area temática</label>
+                        <input className='medio' type="text" id="areaTematica" name="areaTematica" placeholder="Area temática" />
                         <label id='legenda' for="edital">Edital</label>
                         <input type="text" id="edital" name="edital" placeholder="Edital" />
                         <label id='legenda' for="modalidade">Modalidade</label>
-                        <input type="text" id="modalidade" name="modalidade" placeholder="Modalidade" />
+                        <input className='medio' type="text" id="modalidade" name="modalidade" placeholder="Modalidade" />
                         <label id='legenda' for="resumo">Resumo</label>
-                        <input type="text" id="resumo" name="resumo" placeholder="Resumo" />
+                        <input className='longa' type="text" id="resumo" name="resumo" placeholder="Resumo" />
                         <label id='legenda' for="introducao">Introducão</label>
-                        <input type="text" id="introducao" name="introducao" placeholder="Introdução" />
+                        <input className='longa' className='longa' type="text" id="introducao" name="introducao" placeholder="Introdução" />
                         <label id='legenda' for="justificativa">Justificativa</label>
-                        <input type="text" id="justificativa" name="justificativa" placeholder="Justificativa" />
+                        <input className='longa' type="text" id="justificativa" name="justificativa" placeholder="Justificativa" />
                         <label id='legenda' for="objetivos">Objetivos</label>
-                        <input type="text" id="objetivos" name="objetivos" placeholder="Objetivos" />
+                        <input className='longa' type="text" id="objetivos" name="objetivos" placeholder="Objetivos" />
                         <label id='legenda' for="metas">Metas</label>
-                        <input type="text" id="metas" name="metas" placeholder="Metas" />
+                        <input className='longa' type="text" id="metas" name="metas" placeholder="Metas" />
                         <label id='legenda' for="indicadores">Indicadores</label>
                         <input type="text" id="indicadores" name="indicadores" placeholder="Indicadores" />
                         <label id='legenda' for="metodologia">Metodologia</label>
-                        <input type="text" id="metodologia" name="metodologia" placeholder="Metodologia" />
+                        <input className='longa' type="text" id="metodologia" name="metodologia" placeholder="Metodologia" />
                         <label id='legenda' for="qtdBeneficiados">Quantidade de beneficiados</label>
-                        <input type="text" id="qtdBeneficiados" name="qtdBeneficiados" placeholder="Quantidade de beneficiados" />
+                        <input  type="text" id="qtdBeneficiados" name="qtdBeneficiados" placeholder="Quantidade de beneficiados" />
                         <label id='legenda' for="relacaoAtividadePesquisa">Relacão da atividade com a pesquisa</label>
-                        <input type="text" id="relacaoAtividadePesquisa" name="relacaoAtividadePesquisa"
+                        <input className='longa' type="text" id="relacaoAtividadePesquisa" name="relacaoAtividadePesquisa"
                             placeholder="Relacão da atividade com a pesquisa" />
                         <label id='legenda' for="avaliacaoPeloPublico">Forma de avalição pelo público</label>
                         <input type="text" id="avaliacaoPeloPublico" name="avaliacaoPeloPublico"
                             placeholder="Forma de avalição pelo público" />
                         <label id='legenda' for="produtoFinal">Produto final</label>
-                        <input type="text" id="produtoFinal" name="produtoFinal"
+                        <input className='longa' type="text" id="produtoFinal" name="produtoFinal"
                             placeholder="Qual será o produto final" />
                         <label id='legenda' for="orcamento">Orçamento</label>
                         <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento do projeto" />
                         <label id='legenda' for="referencias">Referências bibliográficas</label>
-                        <input type="number" id="referencias" name="referencias" placeholder="Referências bibliográficas" />
+                        <input className='longa' type="text" id="referencias" name="referencias" placeholder="Referências bibliográficas" />
 
 
                     </form>
