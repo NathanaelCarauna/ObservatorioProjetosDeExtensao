@@ -487,13 +487,6 @@ h1#projeto_titulo{
   padding: 30px;
 }
 
-input.longa{
-  height: 300px;
-}
-
-input.medio{
-  height: 100px;
-}
 
 label{
   padding: 20px 0;
@@ -508,4 +501,15 @@ label.texto{
 
 button{
   color: white;
+}
+
+textarea{
+  background-color: rgb(230, 228, 228);
+  border-radius: 10px;
+  border: none;
+  resize: none;
+}
+
+p{
+ 
 }
