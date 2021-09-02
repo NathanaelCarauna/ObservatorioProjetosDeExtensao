@@ -7,13 +7,13 @@ export const Header = (props) => {
             <div className='row'>
               <div className='col-md-8 col-md-5 intro-text'>
                 <h1>
-                  Bem vindo!
+                  Bem vindos!
                   <span></span>
                 </h1>
                 <p>ao observatório de projetos de extesão da UPE Campus Garanhuns!
                 </p>
                 <a
-                  href='#features'
+                  href='/sobre'
                   className='btn btn-custom btn-lg page-scroll'
                 >
                   Saiba mais

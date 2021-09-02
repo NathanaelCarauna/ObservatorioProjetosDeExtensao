@@ -82,19 +82,23 @@ export const CadastrarProjeto = (props) => {
                     <form className="formulario" onSubmit={handleSubmit}>
                         <label className="texto">Novo Projeto</label>
                         <label id='legenda' for="projectname">Título</label>
-                        <input type="text" name="projectname" id="novoProjeto" placeholder="Título do projeto" required
+                        <textarea rows="3" cols="50" name="projectname" id="novoProjeto" placeholder="Título do projeto"
+                            required
                             value={titulo}
                             onChange={(e) => setTitulo(e.target.value)}/>
                         <label id='legenda' for="campus">Instituição/Campus</label>
-                        <input type="text" name="campus" id="campus" placeholder="A qual campus o projeto pertence" required
+                        <textarea  type="text" name="campus" id="campus" placeholder="A qual campus o projeto pertence"
+                            required
                             value={campus}
                             onChange={(e) => setCampus(e.target.value)}/>
                         <label id='legenda' for="cargaHoraria">Carga horária</label>
-                        <input type="number" id="cargaHoraria" name="cargaHoraria" placeholder="Carga horária total do projeto" required
+                        <input type="number" id="cargaHoraria" name="cargaHoraria" placeholder="Carga horária total do projeto"
+                            required
                             value={cargaHorariaTotal}
                             onChange={(e) => setcargaHorariaTotal(e.target.value)}/>
                         <label id='legenda' for="dataInicio">Data de início</label>
-                        <input type="date" id="dataInicio" name="dataInicio" placeholder="Data de inicio" required
+                        <input type="date" id="dataInicio" name="dataInicio" placeholder="Data de inicio" 
+                            required
                             value={dataDeInicio}
                             onChange={(e) => setdataDeInicio(e.target.value)}/>
                         <label id='legenda' for="datafinal">Data de conclusão</label>
@@ -102,59 +106,66 @@ export const CadastrarProjeto = (props) => {
                             value={dataDeConclusao}
                             onChange={(e) => setdataDeConclusao(e.target.value)}/>
                         <label id='legenda' for="diasSemana">Dias da semana</label>
-                        <input type="text" id="diasSemana" name="diasSemana" placeholder="Dias de atividade" required
+                        <textarea type="text" id="diasSemana" name="diasSemana" placeholder="Dias de atividade"
+                            required
                             value={diasDaSemana}
                             onChange={(e) => setdiasDaSemana(e.target.value)}/>
                         <label id='legenda' for="publicoAlvo">Public alvo</label>
-                        <input className='medio' type="text" id="publicoAlvo" name="publicoAlvo" placeholder="Publico alvo" required
+                        <textarea rows="5" cols="50" type="text" id="publicoAlvo" name="publicoAlvo" placeholder="Publico alvo"
+                            required
                             value={publicoAlvo}
                             onChange={(e) => setpublicoAlvo(e.target.value)}/>
                         <label id='legenda' for="parcerias">Parcerias</label>
-                        <input className='medio' type="text" id="parcerias" name="parcerias" placeholder="Parcerias" required
+                        <textarea rows="5" cols="50" type="text" id="parcerias" name="parcerias" placeholder="Parcerias"
+                            required
                             value={parcerias}
                             onChange={(e) => setparcerias(e.target.value)}/>
                         <label id='legenda' for="linhaDeExtensao">Linha de Extensão</label>
-                        <input className='medio' type="text" id="linhaDeExtensao" name="linhaDeExtensao" placeholder="Linha de extensão" required
+                        <textarea rows="5" cols="50" type="text" id="linhaDeExtensao" name="linhaDeExtensao" placeholder="Linha de extensão"
+                            required
                             value={linhaDeExtensão}
                             onChange={(e) => setlinhaDeExtensão(e.target.value)}/>
                         <label id='legenda' for="areaTematica">Area temática</label>
-                        <input className='medio' type="text" id="areaTematica" name="areaTematica" placeholder="Area temática" required
+                        <textarea rows="5" cols="50" type="text" id="areaTematica" name="areaTematica" placeholder="Area temática"
+                            required
                             value={areaTematica}
                             onChange={(e) => setareaTematica(e.target.value)}/>
                         <label id='legenda' for="edital">Edital</label>
-                        <input type="text" id="edital" name="edital" placeholder="Edital" required
+                        <textarea type="text" id="edital" name="edital" placeholder="Edital" 
+                            required
                             value={edital}
                             onChange={(e) => setedital(e.target.value)}/>
                         <label id='legenda' for="modalidade">Modalidade</label>
-                        <input className='medio' type="text" id="modalidade" name="modalidade" placeholder="Modalidade" required
+                        <textarea rows="5" cols="50" type="text" id="modalidade" name="modalidade" placeholder="Modalidade" 
+                            required
                             value={modalidade}
                             onChange={(e) => setmodalidade(e.target.value)}/>
                         <label id='legenda' for="resumo">Resumo</label>
-                        <input className='longa' type="text" id="resumo" name="resumo" placeholder="Resumo" required
+                        <textarea rows="10" cols="50" type="text" id="resumo" name="resumo" placeholder="Resumo"
                             value={resumo}
                             onChange={(e) => setresumo(e.target.value)}/>
                         <label id='legenda' for="introducao">Introducão</label>
-                        <input className='longa' className='longa' type="text" id="introducao" name="introducao" placeholder="Introdução" required
+                        <textarea rows="10" cols="50" className='longa' type="text" id="introducao" name="introducao" placeholder="Introdução" required
                             value={introducao}
                             onChange={(e) => setintroducao(e.target.value)}/>
                         <label id='legenda' for="justificativa">Justificativa</label>
-                        <input className='longa' type="text" id="justificativa" name="justificativa" placeholder="Justificativa" required
+                        <textarea rows="10" cols="50" type="text" id="justificativa" name="justificativa" placeholder="Justificativa" required
                             value={justificativa}
                             onChange={(e) => setjustificativa(e.target.value)}/>
                         <label id='legenda' for="objetivos">Objetivos</label>
-                        <input className='longa' type="text" id="objetivos" name="objetivos" placeholder="Objetivos" required
+                        <textarea rows="10" cols="50" type="text" id="objetivos" name="objetivos" placeholder="Objetivos" required
                             value={objetivos}
                             onChange={(e) => setobjetivos(e.target.value)}/>
                         <label id='legenda' for="metas">Metas</label>
-                        <input className='longa' type="text" id="metas" name="metas" placeholder="Metas" required
+                        <textarea rows="10" cols="50" type="text" id="metas" name="metas" placeholder="Metas"  required
                             value={metas}
                             onChange={(e) => setmetas(e.target.value)}/>
                         <label id='legenda' for="indicadores">Indicadores</label>
-                        <input type="text" id="indicadores" name="indicadores" placeholder="Indicadores" required
+                        <textarea type="text" id="indicadores" name="indicadores" placeholder="Indicadores" required
                             value={indicadores}
                             onChange={(e) => setindicadores(e.target.value)}/>
                         <label id='legenda' for="metodologia">Metodologia</label>
-                        <input className='longa' type="text" id="metodologia" name="metodologia" placeholder="Metodologia" required
+                        <textarea rows="10" cols="50" type="text" id="metodologia" name="metodologia" placeholder="Metodologia" required
                             value={metodologia}
                             onChange={(e) => setmetodologia(e.target.value)}/>
                         <label id='legenda' for="qtdBeneficiados">Quantidade de beneficiados</label>
@@ -162,28 +173,31 @@ export const CadastrarProjeto = (props) => {
                             value={qtdBeneficiados}
                             onChange={(e) => setqtdBeneficiados(e.target.value)}/>
                         <label id='legenda' for="relacaoAtividadePesquisa">Relacão da atividade com a pesquisa</label>
-                        <input className='longa' type="text" id="relacaoAtividadePesquisa" name="relacaoAtividadePesquisa"
+                        <textarea rows="10" cols="50" type="text" id="relacaoAtividadePesquisa" name="relacaoAtividadePesquisa"
                             placeholder="Relacão da atividade com a pesquisa" required
                             value={relacaoAtividadePesquisa}
                             onChange={(e) => setrelacaoAtividadePesquisa(e.target.value)}/>
                         <label id='legenda' for="avaliacaoPeloPublico">Forma de avalição pelo público</label>
-                        <input type="text" id="avaliacaoPeloPublico" name="avaliacaoPeloPublico"
+                        <textarea rows="10" cols="50" id="avaliacaoPeloPublico" name="avaliacaoPeloPublico"
                             placeholder="Forma de avalição pelo público" required
                             value={avaliacaoPeloPublico}
                             onChange={(e) => setavaliacaoPeloPublico(e.target.value)}/>
                         <label id='legenda' for="produtoFinal">Produto final</label>
-                        <input className='longa' type="text" id="produtoFinal" name="produtoFinal"
+                        <textarea rows="10" cols="50" id="produtoFinal" name="produtoFinal"
                             placeholder="Qual será o produto final" required
                             value={produtoFinal}
                             onChange={(e) => setprodutoFinal(e.target.value)}/>
-                        <label id='legenda' for="orcamento">Orçamento</label>
+                        <label id='legenda' for="orcamento">Orçamento do projeto</label>
                         <input type="number" id="orcamento" name="orcamento" placeholder="Orçamento do projeto" required
                             value={orcamento}
                             onChange={(e) => setorcamento(e.target.value)}/>
-                        <label id='legenda' for="referencias">Referências bibliográficas</label>
-                        <input className='longa' type="text" id="referencias" name="referencias" placeholder="Referências bibliográficas" required
+                        <label id='legenda' for="referencias">Referências</label>
+                        <textarea rows="10" cols="50" className='longa' type="text" id="referencias" name="referencias" placeholder="Referências bibliográficas"
+                            required
                             value={referencias}
                             onChange={(e) => setreferencias(e.target.value)}/>
+                        
+
 
                     <div className='botoes'> 
                         <button className="botao" > Cadastrar </button>{' '}
@@ -191,7 +205,6 @@ export const CadastrarProjeto = (props) => {
                     </form>
                 </div>
             </div>
-
         </div>
     );
 };
