@@ -15,6 +15,8 @@ public class UsuarioService {
 
 	@Autowired
 	private IUsuarioDAO dao;
+	@Autowired
+	private PasswordEncriptionAndDecription encription;
 	
 	public List<Usuario> getAll() {
 		return dao.findAll();
@@ -29,6 +31,8 @@ public class UsuarioService {
 	}
 
 	public Usuario createUsuario(Usuario usuarioParam) {
+		String encodedPass = encription.encode(usuarioParam.getPassword());
+		usuarioParam.setPassword(encodedPass);
 		Usuario usuario = dao.save(usuarioParam);		
 		return usuario;
 	}
