@@ -2,6 +2,8 @@ package application.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -42,7 +44,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping()
-	public ResponseEntity<Usuario> createUsuario(@RequestBody Usuario usuarioParam){
+	public ResponseEntity<Usuario> createUsuario(@Valid @RequestBody Usuario usuarioParam) throws NotFoundException{
 		Usuario usuario = service.createUsuario(usuarioParam);
 		return ResponseEntity.ok(usuario);
 	}
