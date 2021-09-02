@@ -59,6 +59,9 @@ export const Login = (props) => {
                             onChange={(e) => setPassword(e.target.value)} />
 
                         <button className="botao" > Login </button>{' '}
+                        {user !== null && user !== "" ? <p>{user.nome}</p>
+                            : <p>{errorText}</p>
+                        }
                     </form>
                 </div>
             </div>
