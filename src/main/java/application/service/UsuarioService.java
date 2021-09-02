@@ -30,7 +30,11 @@ public class UsuarioService {
 		return byId.get();
 	}
 
-	public Usuario createUsuario(Usuario usuarioParam) {
+	public Usuario createUsuario(Usuario usuarioParam) throws NotFoundException {
+		Optional<Usuario> findByEmail = dao.findByEmail(usuarioParam.getEmail());
+		if(findByEmail.isPresent()) {
+			throw new NotFoundException("Email já cadastrado");
+		}
 		String encodedPass = encription.encode(usuarioParam.getPassword());
 		usuarioParam.setPassword(encodedPass);
 		Usuario usuario = dao.save(usuarioParam);		

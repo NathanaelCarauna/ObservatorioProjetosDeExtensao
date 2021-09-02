@@ -61,6 +61,9 @@ export const Cadastro = (props) => {
                         <input type="password" id="pwd" name="pwd" placeholder="escreva sua senha" required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)} />
+                        {/* {user !== null && user !== "" ? <span></span>
+                            : <p>{errorText}</p>
+                        } */}
                         <div className='botoes'>
                             <button className="botao" > Cadastrar </button>{' '}
                             <a href='/login' className="botao" id='login'  > Login </a>{' '}

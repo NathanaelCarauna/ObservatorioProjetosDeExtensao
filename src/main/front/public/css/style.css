@@ -367,7 +367,7 @@ header .intro-text {
 .conteudo{
   margin-top: 15px;
   padding: 50px;
-  height: 400px;
+  /* height: 400px; */
   background: rgb(45, 33, 99);
   border-radius: 15px;
   display: flex;

@@ -44,7 +44,7 @@ public class UsuarioController {
 	}
 	
 	@PostMapping()
-	public ResponseEntity<Usuario> createUsuario(@Valid @RequestBody Usuario usuarioParam){
+	public ResponseEntity<Usuario> createUsuario(@Valid @RequestBody Usuario usuarioParam) throws NotFoundException{
 		Usuario usuario = service.createUsuario(usuarioParam);
 		return ResponseEntity.ok(usuario);
 	}
