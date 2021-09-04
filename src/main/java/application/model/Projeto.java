@@ -44,6 +44,7 @@ public class Projeto {
 	private String areaTematica;
 	private EditalEnum edital;
 	private ModalidadeEnum modalidade;
+	private String link;
 	@Lob
 	@Column
 	private String resumo;
