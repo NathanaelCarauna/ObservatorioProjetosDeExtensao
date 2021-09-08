@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
@@ -84,6 +85,9 @@ public class Projeto {
     @ManyToMany(cascade = CascadeType.ALL,fetch=FetchType.EAGER, mappedBy = "projetos")
 	private List<Usuario> usuarios;
 	private SituacaoEnum situacao;
+	
+	@OneToMany(mappedBy = "projetos")
+	private List<Comentario> comentarios;
 	
 	public void addUser(Usuario user) {
 		usuarios.add(user);
