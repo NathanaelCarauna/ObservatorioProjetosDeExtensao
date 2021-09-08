@@ -6,7 +6,9 @@ import java.util.List;
 import application.model.Projeto;
 import application.model.enums.EditalEnum;
 import application.model.enums.ModalidadeEnum;
+import lombok.Data;
 
+@Data
 public class dadosDTO {
 	private List<String> campus = new ArrayList<String>();
 	private List<EditalEnum> edital = new ArrayList<EditalEnum>();
