@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import application.dto.dadosDTO;
 import application.model.Projeto;
 import application.service.ProjetoService;
 import javassist.NotFoundException;
@@ -66,6 +67,18 @@ public class ProjetoController {
 			projeto = service.deleteProjeto(id);
 			return ResponseEntity.ok(projeto);
 		} catch (NotFoundException e) {
+			e.printStackTrace();
+			return ResponseEntity.notFound().build();
+		}
+	}
+	
+	public ResponseEntity<dadosDTO> getDados(){
+		List<Projeto> projeto;
+		try {
+			projeto = service.getAll();
+			dadosDTO dados = new dadosDTO(projeto);
+			return ResponseEntity.ok(dados);
+		} catch (Exception e) {
 			e.printStackTrace();
 			return ResponseEntity.notFound().build();
 		}
