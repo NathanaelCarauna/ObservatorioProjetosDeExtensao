@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import application.model.Projeto;
 import application.model.Usuario;
 import application.repository.IUsuarioDAO;
 import javassist.NotFoundException;
@@ -28,6 +29,14 @@ public class UsuarioService {
 			throw new NotFoundException("Usuario não encontrado");
 		}
 		return byId.get();
+	}
+	
+	public List<Projeto> getUserProjects(long id) throws NotFoundException{
+		Optional<Usuario> byId = dao.findById(id);
+		if(!byId.isPresent()) {
+			throw new NotFoundException("Usuario não encontrado");
+		}
+		return byId.get().getProjetos();
 	}
 
 	public Usuario createUsuario(Usuario usuarioParam) throws NotFoundException {

@@ -86,7 +86,7 @@ public class Projeto {
 	private List<Usuario> usuarios;
 	private SituacaoEnum situacao;
 	
-	@OneToMany(mappedBy = "projetos")
+	@OneToMany(mappedBy = "projeto")
 	private List<Comentario> comentarios;
 	
 	public void addUser(Usuario user) {
