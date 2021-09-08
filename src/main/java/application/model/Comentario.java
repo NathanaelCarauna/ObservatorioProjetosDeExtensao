@@ -18,10 +18,18 @@ public class Comentario {
 	private long id;
 	private String usuario;
 	private String comentario;
-	
+
 	@ManyToOne
 	@JsonIgnore
 	private Projeto projeto;
 
+	public Comentario(String nome, String comentario) {
+		this.usuario = nome;
+		this.comentario = comentario;
+	}
+
+	public Comentario() {
+		super();
+	}
 
 }
