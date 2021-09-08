@@ -1,5 +1,6 @@
 package application.model;
 
+import java.net.URL;
 import java.util.Date;
 import java.util.List;
 
@@ -44,7 +45,7 @@ public class Projeto {
 	private String areaTematica;
 	private EditalEnum edital;
 	private ModalidadeEnum modalidade;
-	private String link;
+	private URL link;//ver
 	@Lob
 	@Column
 	private String resumo;
