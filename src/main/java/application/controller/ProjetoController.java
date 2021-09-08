@@ -71,7 +71,7 @@ public class ProjetoController {
 			return ResponseEntity.notFound().build();
 		}
 	}
-	
+	@GetMapping("/dados")
 	public ResponseEntity<dadosDTO> getDados(){
 		List<Projeto> projeto;
 		try {
