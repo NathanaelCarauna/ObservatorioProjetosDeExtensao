@@ -24,18 +24,7 @@ public class ProjetoController {
 	
 	@Autowired
 	private ProjetoService service;
-	@GetMapping("/dados")
-	public ResponseEntity<dadosDTO> getDados(){
-		List<Projeto> projeto;
-		try {
-			projeto = service.getAll();
-			dadosDTO dados = new dadosDTO(projeto);
-			return ResponseEntity.ok(dados);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return ResponseEntity.notFound().build();
-		}
-	}
+	
 	
 	@GetMapping
 	public ResponseEntity<List<Projeto>> getAll(){
