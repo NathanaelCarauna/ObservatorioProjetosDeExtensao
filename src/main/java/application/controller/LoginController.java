@@ -12,7 +12,7 @@ import application.dto.UsuarioDTO;
 import application.service.LoginService;
 import javassist.NotFoundException;
 
-@RequestMapping("/login")
+@RequestMapping("/api/login")
 @RestController
 public class LoginController {
 
