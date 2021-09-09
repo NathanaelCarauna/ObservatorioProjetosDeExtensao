@@ -86,7 +86,7 @@ public class Projeto {
 	private List<Usuario> usuarios;
 	private SituacaoEnum situacao;
 	
-	@OneToMany(mappedBy = "projeto", cascade = CascadeType.DETACH)
+	@OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)
 	private List<Comentario> comentarios;
 	
 	public void addUser(Usuario user) {

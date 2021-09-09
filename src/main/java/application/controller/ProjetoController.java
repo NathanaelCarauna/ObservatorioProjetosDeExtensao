@@ -21,18 +21,17 @@ import javassist.NotFoundException;
 @Controller
 @RequestMapping("/api/projetos")
 public class ProjetoController {
-	
+
 	@Autowired
 	private ProjetoService service;
-	
-	
+
 	@GetMapping
-	public ResponseEntity<List<Projeto>> getAll(){
+	public ResponseEntity<List<Projeto>> getAll() {
 		return ResponseEntity.ok(service.getAll());
 	}
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<Projeto> getById(@PathVariable long id){
+	public ResponseEntity<Projeto> getById(@PathVariable long id) {
 		Projeto projeto;
 		try {
 			projeto = service.getById(id);
@@ -42,15 +41,15 @@ public class ProjetoController {
 			return ResponseEntity.notFound().build();
 		}
 	}
-	
+
 	@PostMapping()
-	public ResponseEntity<Projeto> createProjeto(@RequestBody Projeto projetoParam){
+	public ResponseEntity<Projeto> createProjeto(@RequestBody Projeto projetoParam) {
 		Projeto projeto = service.createProjeto(projetoParam);
 		return ResponseEntity.ok(projeto);
 	}
-	
+
 	@PutMapping("/{id}")
-	public ResponseEntity<Projeto> updateProjeto(@PathVariable long id, @RequestBody Projeto projetoP){
+	public ResponseEntity<Projeto> updateProjeto(@PathVariable long id, @RequestBody Projeto projetoP) {
 		Projeto projeto;
 		try {
 			projeto = service.updateProjeto(id, projetoP);
@@ -60,18 +59,13 @@ public class ProjetoController {
 			return ResponseEntity.notFound().build();
 		}
 	}
-	
+
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Projeto> deleteProjeto(@PathVariable long id){
+	public ResponseEntity<Projeto> deleteProjeto(@PathVariable long id) throws NotFoundException {
 		Projeto projeto;
-		try {
-			projeto = service.deleteProjeto(id);
-			return ResponseEntity.ok(projeto);
-		} catch (NotFoundException e) {
-			e.printStackTrace();
-			return ResponseEntity.notFound().build();
-		}
+		projeto = service.deleteProjeto(id);
+		return ResponseEntity.ok(projeto);
+
 	}
-	
-	
+
 }

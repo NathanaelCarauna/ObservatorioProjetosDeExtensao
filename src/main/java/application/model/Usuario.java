@@ -11,6 +11,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import org.springframework.lang.Nullable;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Data;
@@ -35,7 +38,7 @@ public class Usuario {
 	private String password;
 
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.EAGER)	
-	@JsonIgnore
+	@JsonBackReference(value = "projetos")	
 	private List<Projeto> projetos = new ArrayList<Projeto>();
 
 	public void addProject(Projeto projeto) {
